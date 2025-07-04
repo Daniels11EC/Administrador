@@ -84,7 +84,11 @@ function AgregarTarea() {
                             "./img/5.jpeg",
                             "./img/6.jpeg",
                             "./img/7.jpeg",
-                            "./img/8.gif"
+                            "./img/8.gif",
+                            "./img/9.jpeg",
+                            "./img/10.jpeg",
+                            "./img/11.jpeg",
+                            "./img/12.jpeg"
                         ];
                         const rutaAleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
 
