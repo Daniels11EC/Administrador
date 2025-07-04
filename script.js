@@ -38,7 +38,7 @@ function AgregarTarea() {
     let cuentaAtras; // para manejar el setInterval
 
     boton_empezar.addEventListener("click", () => {
-        let tiempo = 1 * 60; // 30 minutos en segundos
+        let tiempo = 30 * 60; // 30 minutos en segundos
 
         if (cuentaAtras) clearInterval(cuentaAtras);
 
