@@ -1,6 +1,7 @@
 const tarea_e = document.getElementById("tarea");
 const boton = document.getElementById("agregar");
 const lista = document.getElementById("lista");
+const alerta = new Audio ('./sonido/alerta.mp3')
 
 function AgregarTarea() {
     const texto = tarea_e.value.trim();
@@ -50,16 +51,15 @@ function AgregarTarea() {
                 .padStart(2, "0")}`;
 
             if (tiempo <= 0) {
-                clearInterval(cuentaAtras);
-                contador.textContent = "⏱️ ¡Tiempo terminado!";
-
                 // Crear barra circular con DaisyUI
                 clearInterval(cuentaAtras);
-                contador.textContent = "⏱️ ¡Tiempo terminado!";
+                contador.textContent = "⏱️ ¡Tiempo terminado, disfrutalo!";
+
+                alerta.play();
 
                 // Crear barra circular (progreso 0%)
                 const progreso = document.createElement("div");
-                progreso.className = "radial-progress text-blue-500 text-2xl mx-auto my-4";
+                progreso.className = "radial-progress text-black-500 text-2xl mx-auto my-4";
                 progreso.setAttribute("style", "--value:0");
                 progreso.setAttribute("role", "progressbar");
                 progreso.textContent = "0%";
@@ -81,7 +81,10 @@ function AgregarTarea() {
                             "./img/2.jpeg",
                             "./img/3.jpeg",
                             "./img/4.jpeg",
-                            "./img/5.jpeg"
+                            "./img/5.jpeg",
+                            "./img/6.jpeg",
+                            "./img/7.jpeg",
+                            "./img/8.gif"
                         ];
                         const rutaAleatoria = imagenes[Math.floor(Math.random() * imagenes.length)];
 
